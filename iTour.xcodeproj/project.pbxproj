@@ -11,6 +11,8 @@
 		24A084FC2B1D45290041F460 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A084FB2B1D45290041F460 /* ContentView.swift */; };
 		24A084FE2B1D453C0041F460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A084FD2B1D453C0041F460 /* Assets.xcassets */; };
 		24A085012B1D453C0041F460 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A085002B1D453C0041F460 /* Preview Assets.xcassets */; };
+		24DAF96E2C9A6FDD00702DC8 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DAF96D2C9A6FDD00702DC8 /* Destination.swift */; };
+		24DAF9702C9A779B00702DC8 /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DAF96F2C9A779B00702DC8 /* EditDestinationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		24A084FB2B1D45290041F460 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24A084FD2B1D453C0041F460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24A085002B1D453C0041F460 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		24DAF96D2C9A6FDD00702DC8 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		24DAF96F2C9A779B00702DC8 /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				24A084F92B1D45290041F460 /* iTourApp.swift */,
 				24A084FB2B1D45290041F460 /* ContentView.swift */,
+				24DAF96D2C9A6FDD00702DC8 /* Destination.swift */,
+				24DAF96F2C9A779B00702DC8 /* EditDestinationView.swift */,
 				24A084FD2B1D453C0041F460 /* Assets.xcassets */,
 				24A084FF2B1D453C0041F460 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				24A084FC2B1D45290041F460 /* ContentView.swift in Sources */,
 				24A084FA2B1D45290041F460 /* iTourApp.swift in Sources */,
+				24DAF96E2C9A6FDD00702DC8 /* Destination.swift in Sources */,
+				24DAF9702C9A779B00702DC8 /* EditDestinationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fraga.renato.iTour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,6 +328,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fraga.renato.iTour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
