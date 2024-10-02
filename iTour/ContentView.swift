@@ -8,7 +8,7 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-  @Environment(\.modelContext) var modelContext
+  @Environment(\.modelContext) private var modelContext
   @Query(sort: \Destination.name) var destinations: [Destination]
   @State private var path = [Destination]()
   
@@ -17,10 +17,14 @@ struct ContentView: View {
       List {
         ForEach(destinations) { destination in
           NavigationLink(value: destination) {
-            VStack(alignment: . leading) {
-              Text(destination.name)
-                .font(.headline)
-              Text(destination.date.formatted(date: .long, time: .shortened))
+            HStack {
+              VStack(alignment: . leading) {
+                Text(destination.name)
+                  .font(.headline)
+                Text(destination.date.formatted(date: .long, time: .shortened))
+              }
+              Spacer()
+              Text("\(destination.sights.count)")
             }
           }
         }.onDelete(perform: deleteDestination)

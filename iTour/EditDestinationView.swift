@@ -8,8 +8,16 @@ import SwiftData
 import SwiftUI
 
 struct EditDestinationView: View {
+  @Environment(\.modelContext) private var modelContext
   @Bindable var destination: Destination
   @State private var newSightName: String = ""
+
+  var sortedSights: [Sight] {
+    destination.sights.sorted {
+      $0.name < $1.name
+    }
+  }
+
   var body: some View {
     Form {
       TextField("Name", text: $destination.name)
@@ -24,9 +32,9 @@ struct EditDestinationView: View {
         }.pickerStyle(.segmented)
       }
       Section("Sights") {
-        ForEach(destination.sights) { sight in
+        ForEach(sortedSights) { sight in
           Text(sight.name)
-        }
+        }.onDelete(perform: deleteSights)
         HStack {
           TextField("Add a new sight in \(destination.name)", text: $newSightName)
           Button(action: addSight) {
@@ -39,13 +47,21 @@ struct EditDestinationView: View {
   }
 
   func addSight() {
-    guard !newSightName.isEmpty else { return }
+    guard newSightName.isEmpty == false else { return }
 
     withAnimation {
-      destination.sights.append(Sight(name: newSightName))
+      let sight = Sight(name: newSightName)
+      destination.sights.append(sight)
       newSightName = ""
     }
 
+  }
+
+  func deleteSights(_ indexSet: IndexSet) {
+    for index in indexSet {
+      let sight = sortedSights[index]
+      modelContext.delete(sight)
+    }
   }
 
 }
