@@ -60,6 +60,9 @@ struct EditDestinationView: View {
   func deleteSights(_ indexSet: IndexSet) {
     for index in indexSet {
       let sight = sortedSights[index]
+      if let sightsIndex = destination.sights.firstIndex(of: sight) {
+        destination.sights.remove(at: sightsIndex)
+      }
       modelContext.delete(sight)
     }
   }
